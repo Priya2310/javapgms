@@ -40,10 +40,30 @@ public void display()
     String x = ".*";
     System.out.println(s1.matches(x));
     System.out.println(s3.matches(x));
-    String a = "er74hba8e7bvj79ffbr3";
-    System.out.println(a.replaceAll("\\D", ""));
+    String group="(hi|hello|bye)";
+    System.out.println("hi".matches(group));
+    System.out.println("how".matches(group));
+    s = "gr(a|e)y";
+    System.out.println("grey".matches(s));
+    System.out.println("gray".matches(s));
+    System.out.println("griy".matches(s));
+    String st = "pant(s)?";
+    System.out.println("pant".matches(st));
+    System.out.println("pants".matches(st));
+    System.out.println("pantsss".matches(st));
     String b = "Apple      Microsoft     IBM";
+    String[] b1 = b.split(" ");
+    for (String string : b1) {
+        System.out.println(string);
+    }
+    String a = "er74hba8e7bvj79ffbr3";
     System.out.println(b.replaceAll("\\s", ""));
-    //System.out.println(a.replaceAll("\\^[0-9]", ""));
+    System.out.println(b.replaceAll("\\w", ""));
+    System.out.println(b.replaceAll("\\W", ""));
+    System.out.println(a.replaceAll("\\d", ""));
+    System.out.println(a.replaceAll("\\D", ""));
+    System.out.println(a.replaceAll("[^0-9]+", ""));
+    System.out.println(a.replaceAll("[^a-zA-Z]+", ""));
+    }
 }
-}
+
